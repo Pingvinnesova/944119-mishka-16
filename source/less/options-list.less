@@ -1,12 +1,17 @@
 .options-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .list-reset;
+  margin-top: auto;
 }
 
 .options-list__link {
-  margin-left: 30px;
-  margin-right: 30px;
+  display: block;
+  box-sizing: border-box;
+  width: 334px;
+  padding: 30px;
+  margin: 0 auto;
   font-size: 19px;
   line-height: 24px;
   .bold;
@@ -20,4 +25,25 @@
 
 .options-list__item--toys {
   background-color: @dark-green;
+}
+
+@media (min-width: @tablet-width) {
+  .options-list {
+    box-sizing: border-box;
+    width: 768px;
+    padding: 0 50px;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .options-list {
+    width: 1150px;
+  }
+
+  .options-list__link {
+    width: 525px;
+  }
 }

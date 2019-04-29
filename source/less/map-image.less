@@ -1,8 +1,13 @@
 .map-image {
-  margin-top: 42px;
   width: 322px;
   height: 457px;
   background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: @desktop-width) {
+  .map-image {
+    width: 525px;
+  }
 }

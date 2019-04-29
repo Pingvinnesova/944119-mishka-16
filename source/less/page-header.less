@@ -1,3 +1,38 @@
 .page-header {
-  padding: 30px;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 20px 30px 0 30px;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__logo-image {
+  display: block;
+  height: 35px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  .page-header__logo-image--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1150px;
+    padding: 0 50px;
+  }
+
+  .page-header__logo-image {
+    height: 72px;
+  }
 }

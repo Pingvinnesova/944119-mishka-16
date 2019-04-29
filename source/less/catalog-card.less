@@ -1,9 +1,12 @@
 .catalog-card__product-link {
+  color: @black;
+  text-decoration: none;
+}
+
+.catalog-card__product-title {
   font-size: 17px;
   line-height: 24px;
   .bold;
-  color: @black;
-  text-decoration: none;
 }
 
 .catalog-card__description {
@@ -17,4 +20,45 @@
   line-height: 24px;
   .bold;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-card {
+    display: flex;
+  }
+
+  .catalog-card__btn {
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+  .catalog-card__wrapper {
+    padding-left: 30px;
+  }
+
+  .catalog-card__price {
+    margin-top: 180px;
+  }
+
+  .catalog-card__product-title {
+    font-size: 20px;
+  }
+
+  .catalog-card__description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-card {
+    display: block;
+  }
+
+  .catalog-card__price {
+    margin-top: 0;
+  }
+
+  .catalog-card__wrapper {
+    padding-left: 0;
+  }
 }
