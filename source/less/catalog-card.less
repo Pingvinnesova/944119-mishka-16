@@ -1,6 +1,8 @@
 .catalog-card__product-link {
+  display: block;
   color: @black;
   text-decoration: none;
+  width: 260px;
 }
 
 .catalog-card__product-title {
@@ -20,9 +22,20 @@
   line-height: 24px;
   .bold;
   color: @black;
+  margin: 0;
+}
+
+.catalog-card__order-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @media (min-width: @tablet-width) {
+  .catalog-card__product-link {
+    width: 333px;
+  }
+
   .catalog-card {
     display: flex;
   }
@@ -33,7 +46,9 @@
   }
 
   .catalog-card__wrapper {
-    padding-left: 30px;
+    width: 333px;
+    box-sizing: border-box;
+    padding-left: 25px;
   }
 
   .catalog-card__price {
@@ -50,6 +65,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-card__product-link {
+    width: 316px;
+  }
+
   .catalog-card {
     display: block;
   }

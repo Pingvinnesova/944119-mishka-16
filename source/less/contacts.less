@@ -12,6 +12,7 @@
 }
 
 .contacts__title {
+  margin: 0;
   font-size: 18px;
   line-height: 30px;
   .bold;
@@ -52,53 +53,90 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts__wrapper {
-    width: 768px;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .contacts__description {
-    width: 330px;
-  }
-
-  .contacts__title {
-    width: 668px;
-    .big-title-tablet;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .contacts__wrapper {
-    width: 350px;
-    flex-direction: column;
+  .contacts {
+    width: 100%;
     padding: 0;
-    padding-left: 175px;
     margin: 0;
   }
 
-  .contacts {
-    flex-direction: row;
-    flex-wrap: wrap;
+
+  .contacts__wrapper {
+    width: 768px;
     box-sizing: border-box;
-    width: 1150px;
     padding: 50px;
     margin: 0 auto;
   }
 
+
   .contacts__title {
-    width: 100%;
-    .big-title-desktop;
+    .big-title-tablet;
+    padding-top: 65px;
+    padding-bottom: 60px;
+  }
+
+  .contacts__info {
+    display: flex;
+  }
+
+  .contacts__description {
+    padding-right: 50px;
+  }
+
+
+  .contacts__button {
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 1150px;
+    box-sizing: border-box;
+    padding: 50px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrapper {
+    margin: 0;
+    padding: 0;
+    padding-left: 175px;
+  }
+
+  .contacts__total-wrapper {
+    position: relative;
+    padding-right: 50%;
+    max-width: 100%;
+    min-height: 462px;
   }
 
   .contacts__map-image {
-    margin: 0;
-    margin-left: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: calc(50% - 50px);
+    max-height: 462px;
+    overflow: hidden;
   }
 
   .contacts__button {
-    margin-left: 175px;
-    margin-top: -20px;
+    display: block;
+    margin-top: auto;
+  }
+
+  .contacts__info {
+    flex-direction: column;
+  }
+
+  .contacts__description {
+    padding: 0;
+    width: 330px;
+  }
+
+  .contacts__title {
+    .big-title-desktop;
+    padding-top: 75px;
+    padding-bottom: 60px;
   }
 }

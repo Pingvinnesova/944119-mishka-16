@@ -2,8 +2,15 @@
   .list-reset;
 }
 
+.user-list__item {
+  border-bottom: 1px solid #ececec;
+}
+
 .user-list__link {
   display: block;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
   font-size: 17px;
   line-height: 24px;
   .bold;
@@ -13,8 +20,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .user-list__item {
+    border-left: 1px solid #ececec;
+    border-bottom: none;
+  }
+
   .user-list__link {
-    padding: 35px 0;
+    width: 263px;
+    padding: 33px 0 33px 81px;
+    margin: 0;
+  }
+
+  .user-list__link--search {
+    font-size: 0;
+    width: 80px;
+    padding: 33px 0;
   }
 
   .user-list {
@@ -26,12 +46,16 @@
 
 @media (min-width: @desktop-width) {
   .user-list {
-    width: 440px;
+    width: 390px;
     display: flex;
     order: 2;
   }
 
   .user-list__link {
     font-size: 17px;
+  }
+
+  .user-list__link--search {
+    font-size: 0;
   }
 }
