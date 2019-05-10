@@ -1,6 +1,8 @@
 .production-process {
-  .block-item-border;
-  margin: 30px;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 .production-process__title {
@@ -16,6 +18,10 @@
   .regular;
 }
 
+.production-process__wrapper {
+  .block-item-border;
+}
+
 .production-process__video {
   width: 260px;
   height: 150px;
@@ -23,4 +29,55 @@
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .production-process {
+    width: 768px;
+    padding: 0 50px;
+    border: none;
+  }
+
+  .production-process__video {
+    order: -1;
+  }
+
+  .production-process__wrapper {
+    display: flex;
+    flex-direction: column;
+    .block-item-border;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production-process {
+    width: 1150px;
+    padding: 0 50px;
+    margin-top: 50px;
+  }
+
+  .production-process__wrapper {
+    position: relative;
+    max-width: 100%;
+    min-height: 458px;
+    padding-left: 70%;
+  }
+
+  .production-process__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 682px;
+    height: 455px;
+  }
+
+  .production-process__description-wrapper {
+    width: 230px;
+  }
+
+  .production-process__title {
+    margin-top: 45px;
+    padding-top: 50px;
+    width: 175px;
+  }
 }

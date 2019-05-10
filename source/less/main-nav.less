@@ -1,4 +1,77 @@
-.main-nav {
-  padding-left: 30px;
-  padding-right: 30px;
+.main-nav__logo {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__logo-image {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 22px auto;
+}
+
+.main-nav__note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    max-height: 88px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .main-nav__logo {
+    width: 321px;
+    margin: 0;
+    margin-top: 22px;
+    border-bottom: none;
+  }
+
+  .main-nav__logo-image {
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 768px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .main-nav__note {
+    display: block;
+    margin: 0;
+    .regular;
+    order: 3;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 1150px;
+  }
+
+  .main-nav__logo {
+    width: 150px;
+    order: 1;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .main-nav__note {
+    order: 5;
+    margin-left: auto;
+    margin-top: 24px;
+  }
 }
