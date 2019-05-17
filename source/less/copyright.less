@@ -3,8 +3,56 @@
   line-height: 18px;
   .bold;
   color: @black;
+  margin: 0;
+  padding-top: 10px;
+  margin-right: 21px;
 }
 
 .copyright {
   display: flex;
+}
+
+.copyright__logo {
+  display: flex;
+  text-decoration: none;
+
+  &:active .copyright__title {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover .copyright__icon-html {
+    fill: #46c1ae;
+  }
+
+  &:active .copyright__icon-html {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
+.copyright__icon-html {
+  fill: #63d1bb;
+  margin-left: 10px;
+  margin-top: 3px;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+.copyright__title {
+  margin-right: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__title {
+    margin-right: 17px;
+  }
 }

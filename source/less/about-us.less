@@ -1,6 +1,6 @@
 .about-us {
   width: 320px;
-  padding: 30px;
+  padding: 19px 30px 27px 30px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -9,6 +9,7 @@
   .list-reset;
   display: flex;
   flex-direction: column;
+  padding-top: 31px;
 }
 
 .about-us__title {
@@ -26,15 +27,103 @@
   color: @black;
 }
 
+.about-us__item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.about-us__item--eco {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-flower.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__item--price {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-money.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__item--like {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icon-feature-heart.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__item--handmade {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icon-feature-ball.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__item--support {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.about-us__item--present {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-feature-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .about-us {
     width: 768px;
-    padding: 50px;
+    padding: 48px 50px 28px 50px;
+  }
+
+  .about-us__item {
+    padding-bottom: 55px;
   }
 
   .about-us__list {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 50px;
   }
 
   .about-us__item-title {
@@ -46,16 +135,48 @@
   .about-us__title {
     .big-title-tablet;
   }
+
+  .about-us__item--eco {
+    order: 1;
+  }
+
+  .about-us__item--price {
+    order: 3;
+  }
+
+  .about-us__item--like {
+    order: 5;
+  }
+
+  .about-us__item--handmade {
+    order: 2;
+  }
+
+  .about-us__item--support {
+    order: 4;
+  }
+
+  .about-us__item--present {
+    order: 6;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .about-us {
     width: 1150px;
-    padding: 0 225px;
+    padding: 59px 225px 0 225px;
+  }
+
+  .about-us__title {
+    .big-title-desktop;
   }
 
   .about-us__item-title {
     width: 340px;
     padding-right: 10px;
+  }
+
+  .about-us__list {
+    padding-top: 47px;
   }
 }
