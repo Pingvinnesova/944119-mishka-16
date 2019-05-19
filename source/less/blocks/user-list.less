@@ -1,0 +1,180 @@
+.user-list {
+  .list-reset;
+}
+
+.user-list__item {
+  border-bottom: 1px solid #ececec;
+}
+
+.user-list__link {
+  display: block;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 25px 10px 28px 76px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 24px;
+  .bold;
+  color: @black;
+  text-decoration: none;
+}
+
+.user-list__link--search {
+  position: relative;
+
+  &:hover .user-list__icon-search {
+    fill: @green;
+  }
+
+  &:focus .user-list__icon-search {
+    fill: @green;
+  }
+
+  &:active .user-list__icon-search {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
+.user-list__icon-search {
+  position: absolute;
+  top: 30px;
+  left: 34px;
+  width: 17.6px;
+  height: 17.6px;
+  fill: rgba(34, 31, 31, 0.2);
+  cursor: pointer;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:focus {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
+.user-list__link--cart {
+  position: relative;
+
+  &:hover .user-list__icon-cart {
+    fill: @green;
+  }
+
+  &:focus .user-list__icon-cart {
+    fill: @green;
+  }
+
+  &:active .user-list__icon-cart {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
+.user-list__icon-cart {
+  position: absolute;
+  top: 30px;
+  left: 31px;
+  width: 20.294px;
+  height: 18.849px;
+  fill: rgba(34, 31, 31, 0.2);
+  cursor: pointer;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:focus {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+}
+
+.user-list a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-list__icon-search {
+    top: 37px;
+    left: 32px;
+  }
+
+  .user-list__icon-cart {
+    top: 34px;
+    left: 32px;
+  }
+
+  .user-list__item {
+    border-left: 1px solid #ececec;
+    border-bottom: none;
+  }
+
+  .user-list__link {
+    width: 263px;
+    padding: 30px 0 33px 81px;
+    margin: 0;
+  }
+
+  .user-list__link--search {
+    width: 80px;
+    padding: 33px 0;
+    font-size: 0;
+
+    &::before {
+      left: 33px;
+      top: 37px;
+    }
+  }
+
+  .user-list__link--cart {
+    &::before {
+      left: 32px;
+      top: 35px;
+    }
+  }
+
+  .user-list {
+    display: flex;
+    justify-content: flex-end;
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list {
+    width: 390px;
+    display: flex;
+    order: 2;
+  }
+
+  .user-list__link {
+    width: 266px;
+    font-size: 17px;
+  }
+
+  .user-list__link--search {
+    width: 82px;
+    padding-right: 3px;
+    font-size: 0;
+  }
+}

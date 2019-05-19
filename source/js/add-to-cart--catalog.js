@@ -1,8 +1,23 @@
-var topProductButton = document.querySelector(".catalog-card__btn");
+var ProductButtonBunny = document.querySelector(".catalog-card__btn--bunny");
+var ProductButtonBasket = document.querySelector(".catalog-card__btn--basket");
+var ProductButtonToys = document.querySelector(".catalog-card__btn--toys");
 var addToCart = document.querySelector(".add-to-cart");
 var substrate = document.querySelector(".substrate");
 
-topProductButton.addEventListener("click", function(evt) {
+
+ProductButtonBunny.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  addToCart.classList.add("add-to-cart--show");
+  substrate.classList.add("substrate--show");
+});
+
+ProductButtonBasket.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  addToCart.classList.add("add-to-cart--show");
+  substrate.classList.add("substrate--show");
+});
+
+ProductButtonToys.addEventListener("click", function(evt) {
   evt.preventDefault();
   addToCart.classList.add("add-to-cart--show");
   substrate.classList.add("substrate--show");

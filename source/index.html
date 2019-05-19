@@ -7,6 +7,11 @@
     <meta name="format-detection" content="telephone=no">
     <link href="css/normalize.css" rel="stylesheet" >
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <svg style="display:none">
@@ -93,10 +98,10 @@
           <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
           <ul class="options-list">
             <li class="options-list__item options-list__item--interior">
-              <a class="options-list__link" href="interior.html"><span class="options-list__link-wrapper">Предметы интерьера</span></a>
+              <a class="options-list__link options-list__link--interior" href="interior.html"><span class="options-list__link-wrapper">Предметы интерьера</span></a>
             </li>
             <li class="options-list__item options-list__item--toys">
-              <a class="options-list__link" href="toys.html"><span class="options-list__link-wrapper">Детские игрушки</span></a>
+              <a class="options-list__link options-list__link--toys" href="toys.html"><span class="options-list__link-wrapper">Детские игрушки</span></a>
             </li>
           </ul>
         </div>
@@ -128,6 +133,10 @@
             </table>
             <div class="top-product__img">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
                 <img class="top-product__product-image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -257,7 +266,6 @@
         <a class="button add-to-cart__button" href="add-to-cart.html">Добавить</a>
       </div>
     </div>
-    <script src="js/picturefill.js"></script>
     <script src="js/main-nav.js"></script>
     <script src="js/add-to-cart.js"></script>
   </body>
