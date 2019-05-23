@@ -1,19 +1,16 @@
 var topProductButton = document.querySelector(".top-product__button");
-var addToCart = document.querySelector(".add-to-cart");
-var substrate = document.querySelector(".substrate");
+var ModalOverlay = document.querySelector(".modal-overlay");
 
 topProductButton.addEventListener("click", function(evt) {
   evt.preventDefault();
-  addToCart.classList.add("add-to-cart--show");
-  substrate.classList.add("substrate--show");
+  ModalOverlay.classList.add("modal-overlay--show");
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
-    if (addToCart.classList.contains("add-to-cart--show")) {
+    if (ModalOverlay.classList.contains("modal-overlay--show")) {
       evt.preventDefault();
-      addToCart.classList.remove("add-to-cart--show");
-      substrate.classList.remove("substrate--show");
+      ModalOverlay.classList.remove("modal-overlay--show");
     }
   }
 });

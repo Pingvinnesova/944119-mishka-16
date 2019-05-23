@@ -1,7 +1,7 @@
 .about-us {
   width: 320px;
   box-sizing: border-box;
-  padding: 19px 30px 27px 30px;
+  padding: 13px 30px 27px 30px;
   margin: 0 auto;
 }
 
@@ -30,14 +30,15 @@
 .about-us__item {
   position: relative;
   padding-bottom: 28px;
+  padding-left: 2px;
 }
 
 .about-us__item--eco {
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 8px;
+    top: 1px;
+    left: 10px;
     width: 32px;
     height: 37px;
     background-image: url("../img/icon-feature-flower.svg");
@@ -50,7 +51,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: 1px;
+    left: 3px;
     width: 47px;
     height: 27px;
     background-image: url("../img/icon-feature-money.svg");
@@ -62,8 +63,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 6px;
-    left: 8px;
+    top: 7px;
+    left: 10px;
     width: 34px;
     height: 27px;
     background-image: url("../img/icon-feature-heart.svg");
@@ -89,7 +90,7 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: -6px;
+    left: -4px;
     width: 55px;
     height: 23px;
     background-image: url("../img/icon-feature-rocket.svg");
@@ -113,23 +114,24 @@
 @media (min-width: @tablet-width) {
   .about-us {
     width: 768px;
-    padding: 48px 50px 28px 50px;
+    padding: 48px 50px 28px 46px;
   }
 
   .about-us__item {
-    padding-bottom: 55px;
+    padding-bottom: 56px;
   }
 
   .about-us__list {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding-top: 48px;
+    padding-left: 4px;
   }
 
   .about-us__item-title {
     .small-title-tablet;
     width: 300px;
-    padding-right: 34px;
+    padding-right: 32px;
   }
 
   .about-us__title {
@@ -164,7 +166,7 @@
 @media (min-width: @desktop-width) {
   .about-us {
     width: 1150px;
-    padding: 59px 225px 0 225px;
+    padding: 57px 225px 0 221px;
   }
 
   .about-us__title {
@@ -173,7 +175,16 @@
 
   .about-us__item-title {
     width: 340px;
-    padding-right: 10px;
+    padding-right: 8px;
+  }
+
+  .about-us__item {
+    padding-bottom: 57px;
+    padding-left: 1px;
+  }
+
+  .about-us__item--handmade h3 {
+    width: 312px;
   }
 
   .about-us__list {

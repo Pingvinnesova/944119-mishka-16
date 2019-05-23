@@ -5,8 +5,11 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
     <link href="css/normalize.css" rel="stylesheet" >
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
@@ -47,7 +50,7 @@
     </svg>
     <div class="substrate"></div>
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__button-wrapper">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
@@ -60,7 +63,7 @@
             </picture>
           </a>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item">
+            <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item site-list__item--border">
@@ -139,7 +142,7 @@
             <div class="catalog-card__wrapper">
               <div class="catalog-card__text-wrapper">
                 <a href="laundry-basket.html" class="catalog-card__product-link">
-                  <h2 class="catalog-card__product-title">Корзинка для белья</h2>
+                  <h2 class="catalog-card__product-title catalog-card__product-title--cart">Корзинка для белья</h2>
                 </a>
                 <p class="catalog-card__description">Диаметр 15 см, высота 10 см</p>
               </div>
@@ -195,7 +198,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo">
+        <a href="index.html" class="page-footer__logo">
           <svg class="page-footer__logo-footer" width="101.615" height="34.056"><use xlink:href="#logo-footer"></use></svg>
         </a>
         <div class="page-footer__social social">
@@ -228,16 +231,18 @@
         </div>
       </div>
     </footer>
-    <div class="add-to-cart">
-      <div class="add-to-cart__wrapper">
-        <h2 class="add-to-cart__title">Добавить в корзину</h2>
-        <p class="add-to-cart__description">Выберите размер</p>
-        <div class="add-to-cart__size-buttons">
-          <button class="add-to-cart__size add-to-cart__size--active" type="button">S</button>
-          <button class="add-to-cart__size" type="button">M</button>
-          <button class="add-to-cart__size" type="button">L</button>
+    <div class="modal-overlay">
+      <div class="add-to-cart">
+        <div class="add-to-cart__wrapper">
+          <h2 class="add-to-cart__title">Добавить в корзину</h2>
+          <p class="add-to-cart__description">Выберите размер</p>
+          <div class="add-to-cart__size-buttons">
+            <button class="add-to-cart__size add-to-cart__size--active" type="button">S</button>
+            <button class="add-to-cart__size" type="button">M</button>
+            <button class="add-to-cart__size" type="button">L</button>
+          </div>
+          <a class="button add-to-cart__button" href="add-to-cart.html">Добавить</a>
         </div>
-        <a class="button add-to-cart__button" href="add-to-cart.html">Добавить</a>
       </div>
     </div>
     <script src="js/picturefill.js"></script>

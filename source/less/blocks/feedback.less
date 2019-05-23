@@ -21,7 +21,7 @@
   font-size: 15px;
   line-height: 30px;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 16px;
   padding-bottom: 26px;
 }
 
@@ -32,6 +32,16 @@
   line-height: 24px;
   font-style: normal;
   padding-bottom: 4px;
+}
+
+.feedback__button {
+  font-size: 18px;
+  line-height: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: 1px;
+  padding-left: 3px;
+  width: 100%;
 }
 
 .feedback__nickname {
@@ -55,13 +65,13 @@
 .feedback__switches {
   display: flex;
   border: 1px solid #ececec;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
+  margin-left: 1px;
 }
 
 .feedback__switches-btn {
   position: relative;
   display: block;
-  width: 130px;
   height: 50px;
   padding: 0;
   outline: none;
@@ -70,14 +80,16 @@
 }
 
 .feedback__list {
-  padding-top: 9px;
+  padding-top: 8px;
+  padding-left: 1px;
 }
 
 .feedback__switches-btn--prev {
+  width: 130px;
   background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   border-right: 1px solid #ececec;
-  background-position: center center;
+  background-position: 36px center;
   cursor: pointer;
 
   &:hover {
@@ -94,9 +106,10 @@
 }
 
 .feedback__switches-btn--next {
+  width: 125px;
   background-image: url("../img/icon-right-arrow.svg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 36px center;
   cursor: pointer;
 
   &:hover {
@@ -116,7 +129,7 @@
   .feedback {
     width: 768px;
     box-sizing: border-box;
-    padding: 77px 50px 83px 50px;
+    padding: 76px 50px 81px 46px;
     margin: 0 auto;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -145,19 +158,24 @@
     right: 0;
     order: 2;
     width: 173px;
-    height: 54px;
+    height: 52px;
+    font-size: 17px;
+    line-height: 20px;
+    margin-top: 2px;
+    padding-left: 0;
   }
 
   .feedback__list {
     order: 3;
     padding-top: 11px;
+    padding-left: 5px;
   }
 
   .feedback__switches {
     position: absolute;
     width: 152px;
-    bottom: 17px;
-    right: 0;
+    bottom: 19px;
+    right: 2px;
     order: 4;
     height: 28px;
     border: none;
@@ -170,10 +188,12 @@
   .feedback__switches-btn--prev {
     border: none;
     margin-right: 39px;
+    background-position: center center;
   }
 
   .feedback__switches-btn--next {
     margin-right: 17px;
+    background-position: center center;
   }
 
   .feedback__author {
@@ -190,12 +210,12 @@
 @media (min-width: @desktop-width) {
   .feedback {
     width: 1150px;
-    padding: 37px 50px 0 50px;
+    padding: 32px 50px 0 50px;
     background-image: none;
   }
 
   .feedback__total {
-    padding-left: 175px;
+    padding-left: 170px;
     padding-top: 69px;
     padding-bottom: 100px;
     background-image: url("../img/review@1x.jpg");
@@ -218,15 +238,16 @@
     margin: 0;
     padding-top: 50px;
     padding-bottom: 7px;
+    padding-right: 105px;
   }
 
   .feedback__switches {
     bottom: 118px;
-    right: 0;
+    right: 3px;
   }
 
   .feedback__button {
-    top: 78px;
-    right: 0;
+    top: 77px;
+    right: 1px;
   }
 }

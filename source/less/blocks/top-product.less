@@ -6,7 +6,7 @@
 .top-product__wrapper {
   width: 320px;
   box-sizing: border-box;
-  padding: 28px 30px 30px 30px;
+  padding: 27px 30px 36px 32px;
   margin: 0 auto;
 }
 
@@ -35,7 +35,11 @@
 }
 
 .top-product__button {
+  font-size: 17px;
+  line-height: 20px;
   text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .top-product__description {
@@ -53,7 +57,7 @@
 .top-product__product-price {
   .bold;
   margin: 0;
-  padding-top: 26px;
+  padding-top: 24px;
   padding-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
@@ -70,27 +74,33 @@
   border-bottom: 1px solid #ececec;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 0;
 }
 
 .top-product__description td {
-  padding-left: 29px;
+  padding-left: 28px;
+}
+
+.top-product__row:first-of-type td {
+  padding-left: 27px;
 }
 
 .top-product__img {
   width: 260px;
   height: 315px;
-  margin-top: 25px;
+  margin-top: 27px;
   overflow: hidden;
 }
 
 .top-product__zigzag {
   position: relative;
-  z-index: 2;
+  z-index: -20px;
   width: 100%;
   height: 20px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-size: 100%;
+  background-size: 300px 6px;
+  background-position: 7px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -105,8 +115,14 @@
     flex-wrap: wrap;
     width: 768px;
     box-sizing: border-box;
-    padding: 37px 50px 50px 50px;
+    padding: 38px 50px 50px 50px;
     margin: 0 auto;
+  }
+
+  .top-product__header {
+    padding-left: 1px;
+    padding-bottom: 9px;
+    padding-top: 7px;
   }
 
   .top-product__title {
@@ -136,8 +152,8 @@
   }
 
   .top-product__order {
-    width: 295px;
-    padding-top: 28px;
+    width: 290px;
+    padding-top: 30px;
   }
 
   .top-product__note {
@@ -181,6 +197,11 @@
     padding-top: 32px;
     padding-bottom: 10px;
   }
+
+  .top-product__zigzag {
+    background-size: 778px 22px;
+    background-position: 0 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -204,7 +225,7 @@
     position: relative;
     width: 1150px;
     min-height: 640px;
-    padding: 115px 50px 77px 50px;
+    padding: 115px 50px 75px 50px;
   }
 
   .top-product__note {
@@ -217,13 +238,14 @@
   .top-product__inner {
     position: static;
     padding-left: 175px;
-    padding-top: 17px;
+    padding-top: 18px;
   }
 
   .top-product__zigzag {
     width: 1050px;
     height: 23px;
     background-size: 100%;
+    background-position: 26px 0;
     margin: 0 auto;
   }
 
@@ -237,5 +259,19 @@
     padding-bottom: 10px;
     padding-right: 50px;
     z-index: -1;
+  }
+
+  .top-product__description td {
+    padding-right: 60px;
+    padding-bottom: 12px;
+    padding-top: 8px;
+  }
+
+  .top-product__header {
+    padding-top: 9px;
+  }
+
+  .top-product__product-price {
+    padding-top: 26px;
   }
 }

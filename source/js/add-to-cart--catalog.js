@@ -1,34 +1,29 @@
 var ProductButtonBunny = document.querySelector(".catalog-card__btn--bunny");
 var ProductButtonBasket = document.querySelector(".catalog-card__btn--basket");
 var ProductButtonToys = document.querySelector(".catalog-card__btn--toys");
-var addToCart = document.querySelector(".add-to-cart");
-var substrate = document.querySelector(".substrate");
+var ModalOverlay = document.querySelector(".modal-overlay");
 
 
 ProductButtonBunny.addEventListener("click", function(evt) {
   evt.preventDefault();
-  addToCart.classList.add("add-to-cart--show");
-  substrate.classList.add("substrate--show");
+  ModalOverlay.classList.add("modal-overlay--show");
 });
 
 ProductButtonBasket.addEventListener("click", function(evt) {
   evt.preventDefault();
-  addToCart.classList.add("add-to-cart--show");
-  substrate.classList.add("substrate--show");
+  ModalOverlay.classList.add("modal-overlay--show");
 });
 
 ProductButtonToys.addEventListener("click", function(evt) {
   evt.preventDefault();
-  addToCart.classList.add("add-to-cart--show");
-  substrate.classList.add("substrate--show");
+  ModalOverlay.classList.add("modal-overlay--show");
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
-    if (addToCart.classList.contains("add-to-cart--show")) {
+    if (ModalOverlay.classList.contains("modal-overlay--show")) {
       evt.preventDefault();
-      addToCart.classList.remove("add-to-cart--show");
-      substrate.classList.remove("substrate--show");
+      ModalOverlay.classList.remove("modal-overlay--show");
     }
   }
 });
