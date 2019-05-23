@@ -1,0 +1,132 @@
+.add-to-cart {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  min-height: 337px;
+  background-color: @white;
+  box-shadow: 0 5px 8px 0 rgba(0, 1, 1, 0.25);
+  z-index: 500;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.add-to-cart__wrapper {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 30px 30px 0 30px;
+  margin: 0 auto;
+}
+
+.add-to-cart__title {
+  .bold;
+  width: 155px;
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.add-to-cart__description {
+  .regular;
+  margin: 0;
+  padding: 12px 3px 23px 0;
+  font-size: 15px;
+  line-height: 30px;
+  color: @black;
+  text-align: center;
+}
+
+.add-to-cart__size-buttons {
+  display: flex;
+  padding-bottom: 32px;
+}
+
+.add-to-cart__size {
+  .bold;
+  display: block;
+  width: 82px;
+  height: 52px;
+  box-sizing: border-box;
+  margin-right: 7px;
+  color: @graphite;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid #ececec;
+  background-color: @white;
+
+  &:hover {
+    border: 2px solid #c7c7c7;
+  }
+
+  &:focus {
+    border: 2px solid #c7c7c7;
+    cursor: pointer;
+  }
+
+  &:active {
+    border: 2px solid @green;
+  }
+}
+
+.add-to-cart__size:nth-child(3n) {
+  margin-right: 0;
+}
+
+.add-to-cart__size--active {
+  border: 2px solid @green;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid @green;
+  }
+
+  &:focus {
+    border: 2px solid @green;
+  }
+
+  &:active {
+    border: 2px solid @green;
+  }
+}
+
+.add-to-cart__button {
+  font-size: 17px;
+  line-height: 16px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  color: @white;
+  border: none;
+  background-color: @green;
+}
+
+@media (min-width: @tablet-width) {
+  .add-to-cart {
+    width: 566px;
+    min-height: 336px;
+    border: 1px solid #c6c6c6;
+  }
+
+  .add-to-cart__wrapper {
+    width: 354px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .add-to-cart__title {
+    padding-top: 33px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .add-to-cart__description {
+    font-size: 17px;
+  }
+
+  .add-to-cart__size {
+    width: 114px;
+  }
+}
