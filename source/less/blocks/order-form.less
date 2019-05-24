@@ -25,8 +25,13 @@
 }
 
 .order-form input[type="text"] {
-  padding-top: 2px;
-  padding-bottom: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.order-form input[name="patronymic"] {
+  padding-top: 3px;
+  padding-bottom: 2px;
 }
 
 .order-form__description {
@@ -74,6 +79,14 @@
   }
 }
 
+.order-form__title--mail {
+  &::after {
+    width: 179px;
+    top: 9px;
+    left: 82px;
+  }
+}
+
 .order-form__item {
   font-size: 17px;
   line-height: 18px;
@@ -97,6 +110,7 @@
 
 .order-form__text::-webkit-input-placeholder {
   position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   .regular;
@@ -106,6 +120,7 @@
 
 .order-form__text::-moz-placeholder {
   position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   .regular;
@@ -128,6 +143,7 @@
 
 .order-form__text:-moz-placeholder {
   position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   .regular;
@@ -142,6 +158,7 @@
 
 .order-form__text:-ms-input-placeholder {
   position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   .regular;
@@ -171,8 +188,8 @@
 
 .order-form__text--tel {
   margin-bottom: 31px;
-  margin-top: 9px;
-  padding-bottom: 4px;
+  margin-top: 12px;
+  padding-bottom: 2px;
   padding-left: 1px;
 }
 
@@ -193,9 +210,9 @@
 }
 
 .order-form__text--email {
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   margin-bottom: 31px;
-  margin-top: 9px;
+  margin-top: 12px;
 }
 
 .order-form__icon-phone {
